@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, Platform } from "react-native";
 import React from "react";
+import { Chip } from "react-native-paper";
 
 export default function SmallCard({ title, count, bcolor }) {
   return (
@@ -19,9 +20,9 @@ const styles = StyleSheet.create({
     // borderWidth: 1,
     // borderColor: "black",
     marginHorizontal: 10,
-    height: "60%",
-    width: "27%",
-    padding: 8,
+    height: "90%",
+    width: "30%",
+    padding: 5,
     alignItems: "center",
     backgroundColor: "white",
     borderRadius: 10,
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
   num: {
     // borderWidth: 1,
     // borderColor: "black",
-    height: "70%",
+    height: "60%",
     width: "80%",
     alignItems: "center",
     justifyContent: "center",
@@ -49,7 +50,12 @@ const styles = StyleSheet.create({
     fontSize: 13,
     justifyContent: "center",
     alignItems: "center",
-    // color: "white",
+    backgroundColor: "#015AAA",
+    padding: 5,
+    borderRadius: 10,
+    width: "90%",
+    textAlign: "center",
+    color: "white",
   },
   numtxt: {
     fontSize: 16,
