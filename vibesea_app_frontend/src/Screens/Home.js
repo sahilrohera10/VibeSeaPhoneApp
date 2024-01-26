@@ -52,7 +52,7 @@ export default function Home() {
   ];
   return (
     <View style={styles.home}>
-      <Text style={styles.homehead}>Home</Text>
+      {/* <Text style={styles.homehead}>Home</Text> */}
       <View style={styles.jobContainer}>
         <Text style={styles.jobhead}>Your Job Applications</Text>
         <View style={styles.jobcardContainer}>
@@ -87,7 +87,7 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   home: {
-    paddingTop: 40,
+    // paddingTop: 40,
     flex: 1,
     // borderWidth: 2,
     // borderColor: "black",
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     // borderWidth: 2,
     // borderColor: "black",
     width: "95%",
-    height: "15%",
+    height: "17%",
     marginTop: 20,
   },
   jobhead: {
