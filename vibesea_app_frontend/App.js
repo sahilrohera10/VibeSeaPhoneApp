@@ -16,6 +16,9 @@ import ShadowSeaScreen from "./src/Screens/ShadowSeaScreen";
 import LoginScreen from "./src/Screens/LoginScreen";
 import RegistrationScreen from "./src/Screens/RegistrationScreen";
 import Home from "./src/Screens/Home";
+import SubleaseRental from "./src/Screens/SubleaseRental";
+import RentalDetails from "./src/Screens/RentalDetails";
+import FilterJobs from "./src/Screens/FilterJobs";
 
 const Drawer = createDrawerNavigator();
 
@@ -28,8 +31,18 @@ const CustomDrawerContent = ({ navigation }) => {
         icon={() => <Ionicons name="home" size={24} />}
       />
       <DrawerItem
-        label="Apply Jobs"
-        onPress={() => navigation.navigate("Apply Jobs")}
+        label="Details"
+        onPress={() => navigation.navigate("Details")}
+        icon={() => <Ionicons name="briefcase" size={24} />}
+      />
+      <DrawerItem
+        label="Sublease Rental"
+        onPress={() => navigation.navigate("Sublease Rental Posts")}
+        icon={() => <Ionicons name="briefcase" size={24} />}
+      />
+      <DrawerItem
+        label="Apply to jobs"
+        onPress={() => navigation.navigate("Apply to jobs")}
         icon={() => <Ionicons name="briefcase" size={24} />}
       />
     </DrawerContentScrollView>
@@ -47,10 +60,13 @@ export default function App() {
         }}
       >
         <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="Apply Jobs" component={Home} />
+        <Drawer.Screen name="Details" component={RentalDetails} />
         <Drawer.Screen name="Shadow Sea" component={ShadowSeaScreen} />
-        <Drawer.Screen name="Resume Reviews" component={Home} />
-        <Drawer.Screen name="Sublease Rental Posts" component={Home} />
+        <Drawer.Screen name="Apply to jobs" component={FilterJobs} />
+        <Drawer.Screen
+          name="Sublease Rental Posts"
+          component={SubleaseRental}
+        />
         <Drawer.Screen name="Salary Vibe" component={Home} />
         <Drawer.Screen name="Career Profile" component={Home} />
         <Drawer.Screen name="Shadow Profile" component={Home} />

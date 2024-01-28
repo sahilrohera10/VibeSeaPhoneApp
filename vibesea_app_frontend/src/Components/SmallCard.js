@@ -17,8 +17,6 @@ export default function SmallCard({ title, count, bcolor }) {
 
 const styles = StyleSheet.create({
   smallcard: {
-    // borderWidth: 1,
-    // borderColor: "black",
     marginHorizontal: 10,
     height: "90%",
     width: "30%",
@@ -39,8 +37,6 @@ const styles = StyleSheet.create({
     }),
   },
   num: {
-    // borderWidth: 1,
-    // borderColor: "black",
     height: "60%",
     width: "80%",
     alignItems: "center",
@@ -59,6 +55,5 @@ const styles = StyleSheet.create({
   },
   numtxt: {
     fontSize: 16,
-    // color: "white",
   },
 });
