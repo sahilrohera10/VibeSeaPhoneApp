@@ -207,8 +207,8 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 15,
     width: "95%",
-    borderWidth: 2,
-    borderColor: "black",
+    // borderWidth: 2,
+    // borderColor: "black",
     marginHorizontal: 10,
   },
   card: {
