@@ -16,6 +16,7 @@ import ShadowSeaScreen from "./src/Screens/ShadowSeaScreen";
 import LoginScreen from "./src/Screens/LoginScreen";
 import RegistrationScreen from "./src/Screens/RegistrationScreen";
 import Home from "./src/Screens/Home";
+import JobDetailScreen from "./src/Screens/JobDetailScreen";
 
 const Drawer = createDrawerNavigator();
 
@@ -46,8 +47,8 @@ export default function App() {
           drawerIcon: () => <Ionicons name="menu" size={24} />,
         }}
       >
-        <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="Apply Jobs" component={Home} />
+        <Drawer.Screen name="Home" component={JobDetailScreen} />
+        <Drawer.Screen name="Apply Jobs" component={ShadowSeaScreen} />
         <Drawer.Screen name="Shadow Sea" component={ShadowSeaScreen} />
         <Drawer.Screen name="Resume Reviews" component={Home} />
         <Drawer.Screen name="Sublease Rental Posts" component={Home} />
