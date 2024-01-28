@@ -1,7 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-// const img = require()
 export default function LoginScreen() {
   const navigation = useNavigation();
   return (
