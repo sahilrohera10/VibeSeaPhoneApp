@@ -1,11 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-
 export default function LoginScreen() {
   const navigation = useNavigation();
   return (
-    <ImageBackground source={{uri:'https://i.pinimg.com/564x/7b/da/3c/7bda3cc5018a5e8af756a1ce82048cf0.jpg'}} style={styles.backgroundImage}>
+    <ImageBackground source={{uri:'https://i.pinimg.com/564x/91/02/11/91021107d17ea8334565a673c9a3206f.jpg'}} style={styles.backgroundImage}>
       <View style={styles.container}>
         <Text style={styles.topHeading}>VibeSea</Text>
 
@@ -63,7 +62,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   loginButton: {
-    backgroundColor: "#3498db",
+    backgroundColor: "#0000a5",
     paddingVertical: 15,
     borderRadius: 5,
     alignItems: "center",
@@ -78,5 +77,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     textAlign: "center",
     fontSize:15,
+    // backgroundColor:''
   },
 });
