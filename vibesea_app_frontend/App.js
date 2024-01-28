@@ -21,7 +21,7 @@ import JobDetailScreen from "./src/Screens/JobDetailScreen";
 import SubleaseRental from "./src/Screens/SubleaseRental";
 import RentalDetails from "./src/Screens/RentalDetails";
 import FilterJobs from "./src/Screens/FilterJobs";
-
+import ResumeReview from "./src/Screens/ResumeReview";
 
 const Drawer = createDrawerNavigator();
 
@@ -48,6 +48,11 @@ const CustomDrawerContent = ({ navigation }) => {
         onPress={() => navigation.navigate("Apply to jobs")}
         icon={() => <Ionicons name="briefcase" size={24} />}
       />
+      <DrawerItem
+        label="Resume Review"
+        onPress={() => navigation.navigate("Resume Review")}
+        icon={() => <Ionicons name="briefcase" size={24} />}
+      />
     </DrawerContentScrollView>
   );
 };
@@ -70,7 +75,7 @@ export default function App() {
           name="Sublease Rental Posts"
           component={SubleaseRental}
         />
-        <Drawer.Screen name="Salary Vibe" component={Home} />
+        <Drawer.Screen name="Resume Review" component={ResumeReview} />
         <Drawer.Screen name="Career Profile" component={Home} />
         <Drawer.Screen name="Shadow Profile" component={Home} />
         <Drawer.Screen name="Settings & Privacy" component={Home} />
