@@ -7,6 +7,7 @@ import RentalDetails from "../Screens/RentalDetails";
 import ShadowSeaScreen from "../Screens/ShadowSeaScreen";
 import FilterJobs from "../Screens/FilterJobs";
 import SubleaseRental from "../Screens/SubleaseRental";
+import ResumeReview from "../Screens/ResumeReview";
 
 const Drawer = createDrawerNavigator();
 
@@ -21,7 +22,7 @@ const DrawerNavigator = () => {
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Apply Jobs" component={FilterJobs} />
       <Drawer.Screen name="Shadow Sea" component={ShadowSeaScreen} />
-      <Drawer.Screen name="Resume Review" component={FilterJobs} />
+      <Drawer.Screen name="Resume Review" component={ResumeReview} />
       <Drawer.Screen name="Sublease Rental Posts" component={SubleaseRental} />
       <Drawer.Screen name="Salary Vibe" component={Home} />
       <Drawer.Screen name="Career Profile" component={Home} />
