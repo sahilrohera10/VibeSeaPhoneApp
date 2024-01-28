@@ -16,9 +16,12 @@ import ShadowSeaScreen from "./src/Screens/ShadowSeaScreen";
 import LoginScreen from "./src/Screens/LoginScreen";
 import RegistrationScreen from "./src/Screens/RegistrationScreen";
 import Home from "./src/Screens/Home";
+
+import JobDetailScreen from "./src/Screens/JobDetailScreen";
 import SubleaseRental from "./src/Screens/SubleaseRental";
 import RentalDetails from "./src/Screens/RentalDetails";
 import FilterJobs from "./src/Screens/FilterJobs";
+
 
 const Drawer = createDrawerNavigator();
 
