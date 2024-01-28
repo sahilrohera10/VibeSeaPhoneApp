@@ -1,12 +1,15 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { Divider } from "react-native-paper";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { EvilIcons } from "@expo/vector-icons";
 import { Fontisto } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 export default function ({ item }) {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.mainCard}>
       <View style={styles.card}>
@@ -40,8 +43,9 @@ export default function ({ item }) {
         </View>
       </View>
       <Divider />
-
+      <TouchableOpacity onPress={() => navigation.navigate("RentalDetails")} >
       <Text style={styles.txt}> View in detail </Text>
+      </TouchableOpacity>
     </View>
   );
 }

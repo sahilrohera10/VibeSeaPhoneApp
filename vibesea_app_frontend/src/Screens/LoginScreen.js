@@ -1,8 +1,9 @@
 import React from "react";
 import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity } from "react-native";
-
+import { useNavigation } from "@react-navigation/native";
 
 export default function LoginScreen() {
+  const navigation = useNavigation();
   return (
     <ImageBackground source={{uri:'https://i.pinimg.com/564x/7b/da/3c/7bda3cc5018a5e8af756a1ce82048cf0.jpg'}} style={styles.backgroundImage}>
       <View style={styles.container}>
@@ -18,7 +19,7 @@ export default function LoginScreen() {
           <TextInput style={styles.input} placeholder="Enter your password" secureTextEntry={true} />
         </View>
 
-        <TouchableOpacity style={styles.loginButton}>
+        <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate("DrawerNavigator")} >
           <Text style={styles.loginButtonText}>Login</Text>
         </TouchableOpacity>
 
