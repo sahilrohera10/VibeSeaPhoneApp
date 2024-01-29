@@ -249,7 +249,7 @@ export default function ShadowSeaScreen() {
       const postComments = prev[postId] || {};
       const collapsedComments = {};
       if (postComments[1]) {
-        collapsedComments[1] = postComments[1]; // Keep the first comment visible
+        collapsedComments[1] = postComments[1]; 
       }
       return {
         ...prev,
@@ -367,27 +367,6 @@ export default function ShadowSeaScreen() {
           Make a Post on Shadow Sea{" "}
         </Text>
       </TouchableOpacity>
-
-      {/* {posts.map((post) => (
-        <View key={post.id} style={styles.postContainer}>
-          <View style={styles.card}>
-            <View style={styles.connectingLine} />
-            <Text style={styles.postTitle}>{post.title}</Text>
-            <View style={styles.postActions}>
-              <TouchableOpacity style={styles.commentActionBtn}>
-                <AntDesign name="hearto" size={18} style={styles.commentActionIcon} />
-              </TouchableOpacity>
-              <Text style={styles.postText}>{post.userId}</Text>
-              <Text style={styles.postText}>{post.companyId ? post.companyId : " - "}</Text>
-              <Text style={styles.postText}>{post.collegeId ? post.collegeId : " - "}</Text>
-              <TouchableOpacity style={styles.commentActionBtn}>
-                <AntDesign name="message1" size={18} style={styles.commentActionIcon} />
-              </TouchableOpacity>
-            </View>
-          </View>
-          {renderPostComments(post)}
-        </View>
-      ))} */}
 
 {posts.map((post) => renderPost(post))}
 
