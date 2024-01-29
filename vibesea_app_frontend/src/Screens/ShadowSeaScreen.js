@@ -419,7 +419,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff", 
     borderRadius: 10,
     elevation: 3,
-    borderWidth: 2,  // Added border width
+    borderWidth: 2,  
     borderColor: "#3498db",  
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
@@ -429,8 +429,6 @@ const styles = StyleSheet.create({
   },
 
   card: {
-    // borderWidth: 1,
-    // borderColor: "blue",
     borderRadius: 10,
     padding: 18,
     marginBottom: 10,
@@ -446,7 +444,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 10,
     alignSelf: "center",
-    color: "#3498db", // Text color for post titles
+    color: "#3498db", 
   },
   postText:{
    fontSize:10,
