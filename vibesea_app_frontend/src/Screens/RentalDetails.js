@@ -2,7 +2,6 @@ import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 // import { Card } from "react-native-paper";
 import { Avatar, Card, IconButton } from "react-native-paper";
-// import TabsView from "../Components/TabsView";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { EvilIcons } from "@expo/vector-icons";

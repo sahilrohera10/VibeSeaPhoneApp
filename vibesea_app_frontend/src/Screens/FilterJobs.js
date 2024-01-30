@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     marginVertical: 10,
     elevation: 3,
-    backgroundColor: "whites",
+    backgroundColor: "white",
     flexDirection: "row",
     justifyContent: "space-between",
 
