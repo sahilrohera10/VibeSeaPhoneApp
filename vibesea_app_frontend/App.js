@@ -1,8 +1,6 @@
 import "react-native-gesture-handler";
-
 import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import LoginScreen from "./src/Screens/LoginScreen";
 import JobDetailScreen from "./src/Screens/JobDetailScreen";

@@ -1,24 +1,46 @@
 import React from "react";
-import { StyleSheet, Text, View, TextInput, ImageBackground, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  ImageBackground,
+  TouchableOpacity,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 export default function LoginScreen() {
   const navigation = useNavigation();
   return (
-    <ImageBackground source={{uri:'https://i.pinimg.com/564x/91/02/11/91021107d17ea8334565a673c9a3206f.jpg'}} style={styles.backgroundImage}>
+    <ImageBackground
+      source={{
+        uri: "https://i.pinimg.com/564x/91/02/11/91021107d17ea8334565a673c9a3206f.jpg",
+      }}
+      style={styles.backgroundImage}
+    >
       <View style={styles.container}>
         <Text style={styles.topHeading}>VibeSea</Text>
 
         <View style={styles.inputContainer}>
           <Text style={styles.label}>Email/Phone</Text>
-          <TextInput style={styles.input} placeholder="Enter your email or phone" />
+          <TextInput
+            style={styles.input}
+            placeholder="Enter your email or phone"
+          />
         </View>
 
         <View style={styles.inputContainer}>
           <Text style={styles.label}>Password</Text>
-          <TextInput style={styles.input} placeholder="Enter your password" secureTextEntry={true} />
+          <TextInput
+            style={styles.input}
+            placeholder="Enter your password"
+            secureTextEntry={true}
+          />
         </View>
 
-        <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate("DrawerNavigator")} >
+        <TouchableOpacity
+          style={styles.loginButton}
+          onPress={() => navigation.navigate("DrawerNavigator")}
+        >
           <Text style={styles.loginButtonText}>Login</Text>
         </TouchableOpacity>
 
@@ -33,19 +55,17 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: "cover",
     justifyContent: "center",
-    // opacity:0.6
   },
   container: {
-      paddingHorizontal: 20,
-    },
-    topHeading: {
-        fontSize: 35,
-        fontWeight: "bold",
-        color: "#fff",
-        marginBottom: 20,
-        textAlign: "center",
-        fontWeight:'bold',
-        
+    paddingHorizontal: 20,
+  },
+  topHeading: {
+    fontSize: 35,
+    fontWeight: "bold",
+    color: "#fff",
+    marginBottom: 20,
+    textAlign: "center",
+    fontWeight: "bold",
   },
   inputContainer: {
     marginBottom: 20,
@@ -76,7 +96,6 @@ const styles = StyleSheet.create({
     color: "#fff",
     marginTop: 20,
     textAlign: "center",
-    fontSize:15,
-    // backgroundColor:''
+    fontSize: 15,
   },
 });

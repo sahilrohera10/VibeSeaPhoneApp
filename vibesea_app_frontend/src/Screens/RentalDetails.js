@@ -1,10 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
-// import { Card } from "react-native-paper";
 import { Avatar, Card, IconButton } from "react-native-paper";
-// import TabsView from "../Components/TabsView";
 import { AntDesign } from "@expo/vector-icons";
-import { FontAwesome } from "@expo/vector-icons";
 import { EvilIcons } from "@expo/vector-icons";
 import { Fontisto } from "@expo/vector-icons";
 
@@ -36,7 +33,6 @@ export default function RentalDetails() {
           </View>
         )}
       />
-      {/* <TabsView /> */}
       <View style={styles.cardMain}>
         <View style={styles.cardtxtContainer}>
           <Text style={styles.txt} variant="titleLarge">
@@ -84,31 +80,21 @@ const styles = StyleSheet.create({
   main: {
     width: "95%",
     flex: 1,
-    // borderWidth: 2,
-    // borderColor: "black",
     marginHorizontal: 10,
   },
   img: {
     marginTop: 10,
   },
   cardtxtContainer: {
-    // flexDirection: "row",
     marginVertical: 10,
     marginHorizontal: 15,
-    // borderWidth: 2,
-    // borderColor: "black",
     paddingHorizontal: 20,
     width: "40%",
     padding: 10,
-    // justifyContent: "center",
     backgroundColor: "#015AAA",
     borderRadius: 20,
-
-    // backgroundColor: "white",
   },
   cardMain: {
-    // backgroundColor: "#F8F8FA",
-    // elevation: 1,
     flexDirection: "row",
     flexWrap: "wrap",
   },

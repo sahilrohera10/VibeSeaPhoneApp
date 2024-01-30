@@ -15,36 +15,31 @@ export default function ({ item }) {
       <View style={styles.card}>
         <View>
           <Text style={styles.cardTxt}>
-            {" "}
             <AntDesign name="user" size={15} color="#015AAA" /> {item.name}
           </Text>
           <Text style={styles.cardTxt}>
-            {" "}
             <AntDesign name="home" size={15} color="#015AAA" /> {item.type}
           </Text>
           <Text style={styles.cardTxt}>
-            {" "}
             <AntDesign name="eyeo" size={15} color="#015AAA" /> {item.looking}
           </Text>
         </View>
         <View>
           <Text style={styles.cardTxt}>
-            {" "}
-            <FontAwesome name="money" size={15} color="#015AAA" /> {item.rate}{" "}
+            <FontAwesome name="money" size={15} color="#015AAA" /> {item.rate}
           </Text>
           <Text style={styles.cardTxt}>
-            <EvilIcons name="location" size={15} color="#015AAA" />{" "}
-            {item.location}{" "}
+            <EvilIcons name="location" size={15} color="#015AAA" />
+            {item.location}
           </Text>
           <Text style={styles.cardTxt}>
-            {" "}
-            <Fontisto name="date" size={15} color="#015AAA" /> From {item.date}{" "}
+            <Fontisto name="date" size={15} color="#015AAA" /> From {item.date}
           </Text>
         </View>
       </View>
       <Divider />
-      <TouchableOpacity onPress={() => navigation.navigate("RentalDetails")} >
-      <Text style={styles.txt}> View in detail </Text>
+      <TouchableOpacity onPress={() => navigation.navigate("RentalDetails")}>
+        <Text style={styles.txt}> View in detail </Text>
       </TouchableOpacity>
     </View>
   );

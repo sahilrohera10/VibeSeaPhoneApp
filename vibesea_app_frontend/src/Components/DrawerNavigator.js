@@ -3,10 +3,9 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Ionicons } from "@expo/vector-icons";
 import CustomDrawerContent from "./CustomDrawerContent";
 import Home from "../Screens/Home";
-import RentalDetails from "../Screens/RentalDetails";
 import ShadowSeaScreen from "../Screens/ShadowSeaScreen";
 import FilterJobs from "../Screens/FilterJobs";
-import SubleaseRental from "../Screens/SubleaseRental";
+import SubleaseRental from "../../Screens/SubleaseRental";
 import ResumeReview from "../Screens/ResumeReview";
 
 const Drawer = createDrawerNavigator();
