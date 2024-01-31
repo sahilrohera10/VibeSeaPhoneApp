@@ -5,7 +5,7 @@ import CustomDrawerContent from "./CustomDrawerContent";
 import Home from "../Screens/Home";
 import ShadowSeaScreen from "../Screens/ShadowSeaScreen";
 import FilterJobs from "../Screens/FilterJobs";
-import SubleaseRental from "../../Screens/SubleaseRental";
+import SubleaseRental from "../Screens/SubleaseRental";
 import ResumeReview from "../Screens/ResumeReview";
 
 const Drawer = createDrawerNavigator();
