@@ -67,7 +67,6 @@ export default function Home() {
 
   return (
     <View style={styles.home}>
-      {/* <Text style={styles.homehead}>Home</Text> */}
       <View style={styles.jobContainer}>
         <Text style={styles.jobhead}>Your job applications</Text>
         <View style={styles.jobcardContainer}>
@@ -120,10 +119,7 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   home: {
-    // paddingTop: 40,
     flex: 1,
-    // borderWidth: 2,
-    // borderColor: "black",
     width: "95%",
     alignItems: "center",
   },
@@ -132,8 +128,6 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   jobContainer: {
-    // borderWidth: 2,
-    // borderColor: "black",
     width: "95%",
     height: "17%",
     marginTop: 20,
@@ -147,8 +141,6 @@ const styles = StyleSheet.create({
     color: "#015AAA",
   },
   jobcardContainer: {
-    // borderWidth: 2,
-    // borderColor: "black",
     width: "100%",
     height: "90%",
     alignItems: "center",

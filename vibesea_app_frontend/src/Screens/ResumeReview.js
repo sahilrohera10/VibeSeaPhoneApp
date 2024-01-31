@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal: "2.5%", // Adjust as needed
+    paddingHorizontal: "2.5%",
   },
   header: {
     width: "95%",
@@ -68,13 +68,11 @@ const styles = StyleSheet.create({
   card: {
     width: "95%",
     backgroundColor: "#ffffff",
-    // padding: 20,
     marginBottom: 10,
     borderRadius: 10,
     height: "40%",
     flexDirection: "row",
     justifyContent: "space-around",
-    // Add any other styling properties you need for the cards
   },
   img: {
     width: "25%",

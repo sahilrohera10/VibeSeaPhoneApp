@@ -7,7 +7,7 @@ import {
   PanResponder,
   Animated,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 import { EvilIcons } from "@expo/vector-icons";
 import { Searchbar, Snackbar } from "react-native-paper";
@@ -67,58 +67,53 @@ const SwipeableCard = ({ item, onSwipe }) => {
   const navigation = useNavigation();
   const pan = useState(new Animated.ValueXY())[0];
   const [swiped, setSwiped] = useState(false);
-  
+
   const panResponder = useRef(
     PanResponder.create({
       onMoveShouldSetPanResponder: (_, { dx, dy }) =>
         Math.abs(dx) > 5 || Math.abs(dy) > 5,
-        onPanResponderMove: useCallback((_, { dx }) => {
-          pan.setValue({ x: dx, y: 0 });
-        }, []),
-        onPanResponderRelease: (_, { dx }) => {
-          const isSwipedRight = dx > 0;
-          const isSwiped = Math.abs(dx) > 100;
-          
-          if (isSwiped) {
-            Animated.timing(pan, {
-              toValue: isSwipedRight ? { x: 300 } : { x: -300 },
-              duration: 200,
-              useNativeDriver: true,
-            }).start(() => {
-              setSwiped(true);
-              onSwipe(item.id, isSwipedRight);
-            });
-          } else {
-            Animated.spring(pan, {
-              toValue: { x: 0 },
-              useNativeDriver: true,
-            }).start();
-          }
-        },
-      })
-      ).current;
-      
-      const dynamicStyles = {
-        transform: pan.getTranslateTransform(),
-        backgroundColor: swiped
-        ? pan.x._value > 0 
-        ? "green"
-        : "red"
-        : "#fff",
-      };
-      
-      return (
-        
+      onPanResponderMove: useCallback((_, { dx }) => {
+        pan.setValue({ x: dx, y: 0 });
+      }, []),
+      onPanResponderRelease: (_, { dx }) => {
+        const isSwipedRight = dx > 0;
+        const isSwiped = Math.abs(dx) > 100;
+
+        if (isSwiped) {
+          Animated.timing(pan, {
+            toValue: isSwipedRight ? { x: 300 } : { x: -300 },
+            duration: 200,
+            useNativeDriver: true,
+          }).start(() => {
+            setSwiped(true);
+            onSwipe(item.id, isSwipedRight);
+          });
+        } else {
+          Animated.spring(pan, {
+            toValue: { x: 0 },
+            useNativeDriver: true,
+          }).start();
+        }
+      },
+    })
+  ).current;
+
+  const dynamicStyles = {
+    transform: pan.getTranslateTransform(),
+    backgroundColor: swiped ? (pan.x._value > 0 ? "green" : "red") : "#fff",
+  };
+
+  return (
     <Animated.View
       style={[styles.card, dynamicStyles]}
       {...panResponder.panHandlers}
     >
-      <View style={{ width: "40%" }}  >
+      <View style={{ width: "40%" }}>
         <Image
           source={{ uri: item.logo }}
           style={{ width: "50%", height: 50, marginBottom: 10 }}
           resizeMode="contain"
-          />
+        />
         <Text style={{ fontWeight: "700", fontSize: 15 }}>{item.name}</Text>
       </View>
       <View>
@@ -131,21 +126,24 @@ const SwipeableCard = ({ item, onSwipe }) => {
 
         {item.promoted && (
           <Text
-          style={{
-            backgroundColor: "#015AAA",
-            width: "47%",
-            padding: 4,
-            borderRadius: 10,
-            color: "white",
-            marginTop: 10,
-            textAlign: "center",
-          }}
+            style={{
+              backgroundColor: "#015AAA",
+              width: "47%",
+              padding: 4,
+              borderRadius: 10,
+              color: "white",
+              marginTop: 10,
+              textAlign: "center",
+            }}
           >
             Promoted
           </Text>
         )}
       </View>
-      <TouchableOpacity onPress={()=> navigation.navigate("JobDetailScreen")} style={styles.viewDetailsButton}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("JobDetailScreen")}
+        style={styles.viewDetailsButton}
+      >
         <Text style={{ color: "#015AAA" }}>View Details </Text>
       </TouchableOpacity>
     </Animated.View>
@@ -154,11 +152,11 @@ const SwipeableCard = ({ item, onSwipe }) => {
 
 const FilterJobs = () => {
   const [items, setItems] = useState(data);
-  
+
   const renderSwipeableCard = ({ item }) => (
     <SwipeableCard item={item} onSwipe={handleSwipe} />
   );
-  
+
   const handleSwipe = (itemId, isRightSwipe) => {
     setVisible(true);
     const swipeDirection = isRightSwipe ? "right" : "left";
@@ -207,16 +205,10 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 15,
     width: "95%",
-    // borderWidth: 2,
-    // borderColor: "black",
     marginHorizontal: 10,
   },
   card: {
     padding: 20,
-    // borderBottomWidth: 1,
-    // borderBottomColor: "#ccc",
-    // borderWidth: 2,
-    // borderColor: "black",
     width: "95%",
     marginHorizontal: 5,
     marginVertical: 10,
@@ -224,18 +216,12 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     flexDirection: "row",
     justifyContent: "space-between",
-
-    // height: "50%",
   },
   viewDetailsButton: {
     position: "absolute",
     bottom: 10,
     right: 0,
     padding: 5,
-    // backgroundColor: "#fff",
-    // borderRadius: 5,
-    // borderWidth: 1,
-    // borderColor: "#015AAA",
   },
 });
 

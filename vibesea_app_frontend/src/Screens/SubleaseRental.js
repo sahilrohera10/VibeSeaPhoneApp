@@ -1,7 +1,6 @@
 import { View, Text, StyleSheet, Pressable, FlatList } from "react-native";
 import React from "react";
 import RentalCard from "../Components/RentalCard";
-import { useNavigation } from "@react-navigation/native";
 
 const data = [
   {
@@ -70,8 +69,6 @@ const data = [
 ];
 
 export default function SubleaseRental() {
-  const navigation = useNavigation();
-
   return (
     <View style={styles.main}>
       <Pressable style={styles.button}>
@@ -80,7 +77,7 @@ export default function SubleaseRental() {
       <View style={styles.listContain}>
         <FlatList
           data={data}
-          renderItem={({ item }) => <RentalCard item={item}/>}
+          renderItem={({ item }) => <RentalCard item={item} />}
           keyExtractor={(item) => item.id.toString()}
         />
       </View>

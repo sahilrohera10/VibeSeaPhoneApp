@@ -1,6 +1,14 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Dimensions, Image, Animated } from "react-native";
-import { FontAwesome5 } from "@expo/vector-icons"; // Import the Apply icon from FontAwesome5
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  TouchableOpacity,
+  Dimensions,
+  Image,
+  Animated,
+} from "react-native";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -31,12 +39,20 @@ const JobDetailScreen = () => {
       <ScrollView
         contentContainerStyle={styles.scrollContainer}
         scrollEventThrottle={16}
-        onScroll={Animated.event([{ nativeEvent: { contentOffset: { y: scrollY } } }], { useNativeDriver: false })}
+        onScroll={Animated.event(
+          [{ nativeEvent: { contentOffset: { y: scrollY } } }],
+          { useNativeDriver: false }
+        )}
       >
         <View style={styles.overlay}>
           <View style={styles.contentContainer}>
             <View style={styles.topContainer}>
-              <Image source={{ uri: 'https://www.pngmart.com/files/4/Microsoft-Logo-PNG-Photos.png' }} style={styles.logo} />
+              <Image
+                source={{
+                  uri: "https://www.pngmart.com/files/4/Microsoft-Logo-PNG-Photos.png",
+                }}
+                style={styles.logo}
+              />
               <View style={styles.header}>
                 <Text style={styles.companyName}>Microsoft</Text>
                 <Text style={styles.jobRole}>Software Engineer</Text>
@@ -61,7 +77,9 @@ const JobDetailScreen = () => {
               <View style={styles.card}>
                 <Text style={styles.sectionHeader}>Description</Text>
                 <Text style={styles.sectionText}>
-                  Join Microsoft's innovative team as a Software Engineer.{'\n'} In this role, you will contribute to cutting-edge projects and collaborate with talented professionals.
+                  Join Microsoft's innovative team as a Software Engineer.{"\n"}{" "}
+                  In this role, you will contribute to cutting-edge projects and
+                  collaborate with talented professionals.
                 </Text>
               </View>
             </View>
@@ -70,9 +88,9 @@ const JobDetailScreen = () => {
               <View style={styles.card}>
                 <Text style={styles.sectionHeader}>Qualifications</Text>
                 <Text style={styles.sectionText}>
-                  - Bachelor's degree in Computer Science{'\n'}
-                  - Relevant certifications{'\n'}
-                  - Masters in Computer Engineering (preferred)
+                  - Bachelor's degree in Computer Science{"\n"}- Relevant
+                  certifications{"\n"}- Masters in Computer Engineering
+                  (preferred)
                 </Text>
               </View>
             </View>
@@ -80,11 +98,14 @@ const JobDetailScreen = () => {
             <View style={styles.cardContainer}>
               <View style={styles.card}>
                 <Text style={styles.sectionHeader}>Responsibilities</Text>
-                <Text style={styles.sectionText} numberOfLines={isReadMore ? undefined : 3}>
-                  - Develop and maintain software solutions{'\n'}
-                  - Collaborate with cross-functional teams{'\n'}
-                  - Participate in code reviews and design discussions{'\n'}
-                  - Troubleshoot and debug applications
+                <Text
+                  style={styles.sectionText}
+                  numberOfLines={isReadMore ? undefined : 3}
+                >
+                  - Develop and maintain software solutions{"\n"}- Collaborate
+                  with cross-functional teams{"\n"}- Participate in code reviews
+                  and design discussions{"\n"}- Troubleshoot and debug
+                  applications
                 </Text>
                 {!isReadMore && (
                   <TouchableOpacity onPress={toggleReadMore}>
@@ -121,7 +142,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     padding: 20,
-    paddingBottom: windowHeight * 0.1, // 10% of window height for bottom padding
+    paddingBottom: windowHeight * 0.1,
   },
   topContainer: {
     flexDirection: "column",
@@ -159,14 +180,14 @@ const styles = StyleSheet.create({
   chipsContainer: {
     flexDirection: "row",
     marginTop: 10,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   chip: {
     backgroundColor: "#ddd",
     padding: 10,
     borderRadius: 8,
     marginRight: 5,
-    alignSelf: 'center',
+    alignSelf: "center",
   },
   tabsContainer: {
     flexDirection: "row",
@@ -190,7 +211,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     width: "80%",
     marginVertical: 20,
-    alignSelf: 'center',
+    alignSelf: "center",
   },
   cardContainer: {
     marginTop: 20,
@@ -227,8 +248,8 @@ const styles = StyleSheet.create({
     bottom: 20,
     width: "100%",
     alignItems: "center",
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    flexDirection: "row",
+    justifyContent: "space-evenly",
   },
   applyButton: {
     flexDirection: "row",

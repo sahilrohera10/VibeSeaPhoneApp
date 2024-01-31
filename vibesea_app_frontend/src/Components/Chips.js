@@ -1,12 +1,11 @@
-import { View, Text, StyleSheet, Platform } from "react-native";
+import { Text, StyleSheet, Platform } from "react-native";
 import React from "react";
 import { Chip } from "react-native-paper";
 
 export default function Chips({ txt }) {
   return (
     <Chip style={styles.chip}>
-      {" "}
-      <Text style={styles.txt}> {txt} </Text>{" "}
+      <Text style={styles.txt}> {txt} </Text>
     </Chip>
   );
 }
